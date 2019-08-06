@@ -18,10 +18,12 @@ fname.onchange = function() { //onchange event
     const para = document.createElement('span')
     para.className = 'listPara'
 
+    //using forEach kind of loop in js 
     ourList.forEach(function(item, index){
-       
+       // concatinating strings to geta list
         para.innerHTML = `${index + 1} . ${item}`
         contentOne.appendChild(para);
+        
 
     });
 }
