@@ -1,0 +1,124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    perspective: 1000px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+
+.parallax-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+
+.layer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E6E6FA, #6A5ACD);
+    transform: translateZ(-3px) scale(4);
+}
+
+
+.layer-mid {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateZ(-1px) scale(1.5);
+    border-radius: 20px;
+    animation: rotateMid 15s infinite linear;
+}
+
+@keyframes rotateMid {
+    0% { transform: translateZ(-1px) scale(1.5) rotateY(0deg); }
+    100% { transform: translateZ(-1px) scale(1.5) rotateY(360deg); }
+}
+
+
+.layer-fore {
+    position: relative;
+    top: 30%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #483D8B;
+    transform: translateZ(2px) scale(1);
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-out;
+}
+
+p {
+    font-size: 1.5em;
+    color: #483D8B;
+    animation: fadeInUp 4s ease-out;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.cta-button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background-color: #6A5ACD;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    background-color: #483D8B;
+}
+
+
+.parallax-section {
+    scroll-behavior: smooth;
+}
+
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E6FA;
+    color: #483D8B;
+    font-size: 2em;
+}
